@@ -1,274 +1,116 @@
-\# 🧪 PetStore API Automation Project
+# 🧪 PetStore API Automation Project
 
+This project automates API testing of the [Swagger PetStore](https://petstore.swagger.io/) using **Rest Assured**, **Java**, **Maven**, and **TestNG**. It includes structured reporting via **Extent Reports** and follows modular, maintainable best practices.
 
+## 📌 Key Features
+- ✅ REST API automation using **Rest Assured**
+- 🧱 Build and dependency management via **Maven**
+- 🧪 Test execution and assertions using **TestNG**
+- 📊 **Extent Reports** for rich HTML reporting
+- 🔁 Request & response validation (status code, headers, body)
+- 📂 Organized by modules with clear naming conventions
+- 🔐 Token-based authentication support (if applicable)
 
-This project automates API testing of the \[Swagger PetStore](https://petstore.swagger.io/) using \*\*Rest Assured\*\*, \*\*Java\*\*, \*\*Maven\*\*, and \*\*TestNG\*\*. It includes structured reporting via \*\*Extent Reports\*\* and follows modular, maintainable best practices.
+## 🛠️ Tech Stack
 
+| Tool | Purpose |
+|------|---------|
+| Java | Programming Language |
+| Rest Assured | API Testing Framework |
+| TestNG | Test Execution & Assertions |
+| Maven | Dependency & Project Management |
+| Extent Reports | Test Reporting Framework |
+| Git & GitHub | Version Control |
 
-
----
-
-
-
-\## 📌 Key Features
-
-
-
-\- ✅ REST API automation using \*\*Rest Assured\*\*
-
-\- 🧱 Build and dependency management via \*\*Maven\*\*
-
-\- 🧪 Test execution and assertions using \*\*TestNG\*\*# 🧪 PetStore API Automation Project
-
-
-
-This project automates API testing of the \[Swagger PetStore](https://petstore.swagger.io/) using \*\*Rest Assured\*\*, \*\*Java\*\*, \*\*Maven\*\*, and \*\*TestNG\*\*. It includes structured reporting via \*\*Extent Reports\*\* and follows modular, maintainable best practices.
-
-
-
----
-
-
-
-\## 📌 Key Features
-
-
-
-\- ✅ REST API automation using \*\*Rest Assured\*\*
-
-\- 🧱 Build and dependency management via \*\*Maven\*\*
-
-\- 🧪 Test execution and assertions using \*\*TestNG\*\*
-
-\- 📊 \*\*Extent Reports\*\* for rich HTML reporting
-
-\- 🔁 Request \& response validation (status code, headers, body)
-
-\- 📂 Organized by modules with clear naming conventions
-
-\- 🔐 Token-based authentication support (if applicable)
-
-
-
----
-
-
-
-\## 🛠️ Tech Stack
-
-
-
-| Tool           | Purpose                         |
-
-|----------------|---------------------------------|
-
-| Java           | Programming Language            |
-
-| Rest Assured   | API Testing Framework           |
-
-| TestNG         | Test Execution \& Assertions     |
-
-| Maven          | Dependency \& Project Management |
-
-| Extent Reports | Test Reporting Framework        |
-
-| Git \& GitHub   | Version Control                 |
-
-
-
----
-
-
-
-\## 🗂️ Project Structure
-
-
+## 🗂️ Project Structure
 
 PetStoreRestAssured/
-
 ├── src/
-
 │ ├── main/java/
-
-│ │ └── utilities/ # Common utilities (e.g., config, report setup)
-
+│ │ └── utilities/ # Common utilities (config, report setup)
 │ └── test/java/
-
 │ ├── tests/ # API Test classes
-
 │ ├── pojo/ # Request/Response POJOs
-
-│ ├── base/ # Base test class (setup \& teardown)
-
-│ └── data/ # Test data (JSON or static data)
-
+│ ├── base/ # Base test class (setup & teardown)
+│ └── data/ # Test data (JSON/static data)
 ├── testng.xml # TestNG Suite Configuration
-
 ├── pom.xml # Maven Dependencies
-
 ├── test-output/ # Extent HTML Report Output
-
 └── README.md # Project Documentation
 
+bash
+Copy code
 
+## 🚀 How to Run the Tests
 
-yaml
-
-Copy
-
-Edit
-
-
-
----
-
-
-
-\## 🚀 How to Run the Tests
-
-
-
-1\. \*\*Clone the Repository\*\*
-
-&nbsp;  ```bash
-
-&nbsp;  git clone https://github.com/dikshab0497/PetStoreRestAssured.git
-
-&nbsp;  cd PetStoreRestAssured
-
+1. **Clone the Repository**
+```bash
+git clone https://github.com/dikshab0497/PetStoreRestAssured.git
+cd PetStoreRestAssured
 Import as a Maven Project into IntelliJ or Eclipse
 
-
-
-Run using Maven
-
-
+Run tests using Maven
 
 bash
-
-Copy
-
-Edit
-
+Copy code
 mvn clean test
-
 Or directly from testng.xml in your IDE.
 
-
-
 📊 Reporting – Extent Reports
+Reports are generated automatically after each run in /test-output/ExtentReport.html
 
-The project uses Extent Reports for professional-grade HTML reporting.
-
-
-
-📁 Reports are generated automatically after each run and stored in:
-
-
-
-bash
-
-Copy
-
-Edit
-
-/test-output/ExtentReport.html
-
-🔍 Reports include:
-
-
+Includes:
 
 Pass/Fail status per test
 
-
-
 Timestamps
 
-
-
-Category or class-level grouping
-
-
+Class-level grouping
 
 Exception trace (if any)
 
-
-
-(Optional) Screenshot support
-
-
+Optional: screenshots
 
 🧪 Sample API Test Scenarios
-
 🐶 Add a new pet to the store
-
-
 
 🔍 Retrieve pet details by ID
 
-
-
 ✏️ Update pet information
-
-
 
 ❌ Verify error handling for invalid IDs
 
-
-
 📦 Get pet by status (available/sold/pending)
-
-
 
 🧑‍💻 Login user and get session (if enabled)
 
-
-
 🗑️ Delete pet and verify deletion
 
+📌📌 Future Enhancements
 
+Parallel execution for faster regression runs
 
-📌 Future Enhancements
+Add retry logic for flaky APIs
 
-&nbsp;Add JSON Schema Validation for response body
+Jenkins integration for CI/CD automation
 
-
-
-&nbsp;Implement Data-Driven Testing using Excel/JSON
-
-
-
-&nbsp;Add retry logic for flaky APIs
-
-
-
-&nbsp;Jenkins integration for CI/CD automation
-
-
-
-&nbsp;Trigger reports via email after test execution
-
-
+Trigger reports via email after test execution
 
 🙋‍♀️ Author
-
 Diksha Bandagale
-
-📧 dikshab0497@gmail.com
-
-🔗 LinkedIn
-
-
+📧 dikshabandagale0497@gmail.com
+🔗 https://www.linkedin.com/in/diksha-bandagale-44bbb81ab/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BzUVxnPD2QGGH0dTyq1fZXw%3D%3D
 
 📜 License
-
 This project is licensed under the MIT License.
 
+pgsql
+Copy code
 
+---
 
-yaml
+This version is **clean, professional, and ready to push to GitHub**. It will also look great when you **feature it on LinkedIn**.  
 
-Copy
+If you want, I can also **suggest a few extra badges and visuals** to make your GitHub repo **stand out even more**.  
 
-Edit
-
+Do you want me to do that?
