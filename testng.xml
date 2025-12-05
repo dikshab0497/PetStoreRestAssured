@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding
+="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="PetSuite">
   
@@ -8,9 +9,24 @@
   
   <test thread-count="5" name="PetTests">
     <classes>
-<!-- <class name="api.test.UserTests"/> -->
-        <class name="api.test.StoreTests"/>
+ <!--<class name="api.test.UserTests"/> -->
+    <!--    <class name="api.test.StoreTests"/>-->
+      <!--  <class name="api.test.UserDataProviderTest"/> -->
+      <!--  <class name="api.test.UserXlsDDTTest"/>-->
+      <!--  <class name="api.test.UserNegativeTests"/>-->
+        <!--<class name="api.test.UserNegativeBodyTest"/>-->
+     <!--   <class name="api.test.UserJsonScemaValidationTest"/>-->
      <!-- <class name="api.test.DDTests"/>  -->
+     <class name="api.test.ResponseTimeLoadTest"/>
+       <!--   <class name="api.test.FullFieldValidationTest"/> -->
+    <!--      <class name="api.test.InternetChcekTest"/> -->
+          <!--<class name="api.test.BasicAuthTest"/>-->
+      <!--    <class name="api.test.JWTAuthTest"/> -->
+        <!--  <class name="api.test.APIKeyTest"/> -->
+          <!--  <class name="api.test.OAuthAuthenticationTest"/> -->
+         <!--   <class name="api.test.ComplexChainingTest"/> -->
+            <!--<class name="api.test.CreateUserWithArrayDataTest"/>-->
+          <!--  <class name="api.test.AdvanceNegativeTestingTest"/> -->
     </classes>
   </test> <!-- PetTests -->
 </suite> <!-- PetSuite -->

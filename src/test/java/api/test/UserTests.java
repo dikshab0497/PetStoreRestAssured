@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
 
+import api.dataproviders.UserDataProvider;
 import api.endpoints.UserEndPoints;
 import api.payload.User;
 import io.restassured.response.Response;
@@ -24,7 +25,7 @@ public class UserTests {
 	{
 		faker=new Faker();
 		userPayload=new User();
-		
+		//random data
 		userPayload.setId(faker.idNumber().hashCode());
 		userPayload.setUsername(faker.name().username());
 		userPayload.setFirstName(faker.name().firstName());
@@ -46,8 +47,9 @@ public class UserTests {
 		Response response = up.createUser(userPayload);
 		response.then().log().all();
 		
+
 		Assert.assertEquals(response.statusCode(), 200);
-		
+	
 		logger.info("..........................User is created..............................");
 	}
 	

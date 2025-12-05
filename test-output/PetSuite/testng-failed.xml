@@ -6,12 +6,15 @@
   </listeners>
   <test thread-count="5" name="PetTests(failed)">
     <classes>
-      <class name="api.test.StoreTests">
+      <class name="api.test.AdvanceNegativeTestingTest">
         <methods>
-          <include name="testGetOrder"/>
-          <include name="setup"/>
+          <include name="testUsernameTooShort"/>
+          <include name="testSqlInjection"/>
+          <include name="testOversizedPayload"/>
+          <include name="testInvalidToken"/>
+          <include name="testUsernameTooLong"/>
         </methods>
-      </class> <!-- api.test.StoreTests -->
+      </class> <!-- api.test.AdvanceNegativeTestingTest -->
     </classes>
   </test> <!-- PetTests(failed) -->
 </suite> <!-- Failed suite [PetSuite] -->

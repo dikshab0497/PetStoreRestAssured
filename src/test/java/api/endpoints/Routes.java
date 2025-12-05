@@ -20,6 +20,11 @@ public class Routes {
     public static String get_url=base_url+"/user/{username}";
     public static String update_url=base_url+"/user/{username}";
     public static String delete_url=base_url+"/user/{username}";
+    public static String getLogin_url=base_url+"/user/login";
+    public static String getLogout_url=base_url+"/user/logout";
+    public static String postWithArray_url=base_url+"/user/createWithArray";
+
+    
     
     //Store module
     public static String Storepost_url=base_url+"/store/order";

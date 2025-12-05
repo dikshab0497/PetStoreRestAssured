@@ -151,6 +151,7 @@ public class StoreTests {
 
         boolean actualComplete = response.jsonPath().getBoolean("complete");
         System.out.println("⚠️ Note: Expected complete: " + storePayload.isCompleted() + ", Actual: " + actualComplete);
+        Assert.assertEquals(actualComplete, storePayload.isCompleted(), "Complete field mismatch");
 
         logger.info("📦 Order details verified.");
     }
